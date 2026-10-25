@@ -1,0 +1,19 @@
+{
+  "candidates": [
+    "incumbent_ensemble",
+    "adapted_embedding_hybrid",
+    "adapted_equal_weight_ensemble"
+  ],
+  "selection": "highest mean unrounded macro-F1 over author splits 42,7,2026",
+  "primary_seed_seen_before_confirmation": true,
+  "primary_gate_gain": 0.007159144128731865,
+  "encoder_hyperparameters_fixed": true,
+  "pair_sample_per_class": 128,
+  "training_steps": 48,
+  "ensemble_weights": [
+    0.5,
+    0.5
+  ],
+  "no_test_for_selection": true,
+  "previous_official_test_exposure": true
+}

@@ -1,0 +1,37 @@
+{
+  "selected": "adapted_equal_weight_ensemble",
+  "candidates": [
+    {
+      "experiment": "incumbent_ensemble",
+      "macro_f1_by_seed_42_7_2026": [
+        0.6095861918058567,
+        0.6097048754632642,
+        0.6101398318209141
+      ],
+      "mean_macro_f1": 0.6098102996966784
+    },
+    {
+      "experiment": "adapted_embedding_hybrid",
+      "macro_f1_by_seed_42_7_2026": [
+        0.6116148256425111,
+        0.6042832410495488,
+        0.6042577407459517
+      ],
+      "mean_macro_f1": 0.6067186024793373
+    },
+    {
+      "experiment": "adapted_equal_weight_ensemble",
+      "macro_f1_by_seed_42_7_2026": [
+        0.6167453359345886,
+        0.6098736448629741,
+        0.6119799957234738
+      ],
+      "mean_macro_f1": 0.6128663255070123
+    }
+  ],
+  "selection_rule": "highest mean unrounded macro-F1 across author splits 42,7,2026",
+  "test_seen_in_previous_rounds": true,
+  "official_test_used_for_this_selection": false,
+  "encoder_configuration_fixed_across_splits": true,
+  "split_specific_encoder_training": true
+}

@@ -1,0 +1,39 @@
+{
+  "seed": 7,
+  "results": [
+    {
+      "experiment": "frozen_embedding_control",
+      "macro_f1": 0.6057,
+      "qwk": 0.5472,
+      "accuracy": 0.6188,
+      "macro_f1_unrounded": 0.6056766198605376
+    },
+    {
+      "experiment": "incumbent_ensemble",
+      "macro_f1": 0.6097,
+      "qwk": 0.5514,
+      "accuracy": 0.6215,
+      "macro_f1_unrounded": 0.6097048754632642
+    },
+    {
+      "experiment": "adapted_embedding_hybrid",
+      "macro_f1": 0.6043,
+      "qwk": 0.5463,
+      "accuracy": 0.6168,
+      "macro_f1_unrounded": 0.6042832410495488
+    },
+    {
+      "experiment": "adapted_equal_weight_ensemble",
+      "macro_f1": 0.6099,
+      "qwk": 0.5528,
+      "accuracy": 0.6212,
+      "macro_f1_unrounded": 0.6098736448629741
+    }
+  ],
+  "best_new_candidate": "adapted_equal_weight_ensemble",
+  "gain_over_incumbent": 0.00016876939970988936,
+  "gate_passed": null,
+  "conclusion": "Confirmation split recorded; final decision uses the three-split mean",
+  "not_a_blind_test": true,
+  "primary_gate_applicable": false
+}

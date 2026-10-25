@@ -1,0 +1,39 @@
+{
+  "seed": 2026,
+  "results": [
+    {
+      "experiment": "frozen_embedding_control",
+      "macro_f1": 0.603,
+      "qwk": 0.5459,
+      "accuracy": 0.6121,
+      "macro_f1_unrounded": 0.6029513411823885
+    },
+    {
+      "experiment": "incumbent_ensemble",
+      "macro_f1": 0.6101,
+      "qwk": 0.5567,
+      "accuracy": 0.6185,
+      "macro_f1_unrounded": 0.6101398318209141
+    },
+    {
+      "experiment": "adapted_embedding_hybrid",
+      "macro_f1": 0.6043,
+      "qwk": 0.5499,
+      "accuracy": 0.6125,
+      "macro_f1_unrounded": 0.6042577407459517
+    },
+    {
+      "experiment": "adapted_equal_weight_ensemble",
+      "macro_f1": 0.612,
+      "qwk": 0.5589,
+      "accuracy": 0.6199,
+      "macro_f1_unrounded": 0.6119799957234738
+    }
+  ],
+  "best_new_candidate": "adapted_equal_weight_ensemble",
+  "gain_over_incumbent": 0.0018401639025596994,
+  "primary_gate_applicable": false,
+  "gate_passed": null,
+  "conclusion": "Confirmation split recorded; final decision uses the three-split mean",
+  "not_a_blind_test": true
+}
