@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "files": {
+    "models/baseline/model.joblib": "8ab443249a8b9e6737a9cf4aeed5888e61603abb8ca04a7365ad7c5dc75151ec",
+    "models/history-1/model.joblib": "7344117a9355c4e4df3df2f5e0cef658d200d2c9a9a42e4f2ab4d66f1c71bed6",
+    "models/refine-r05-text-adapt-last4/model.pt": "79d3b01ed1b842c1ef1aa4ac5c3ea32049978a3a03030e05a411c4b062eb0890",
+    "models/refine-r07-adapted-history128/model.joblib": "cfc55705b66cf513a5201e710844c86867f50c83ba80d7b473ea6ae016417e65",
+    "models/refine-r08-text-adapt-last12-e3/model.pt": "50df3411c4b03246fcaee2245b7301dc1596b3b9b5a20da6e1dfeff66590033c"
+  }
+}

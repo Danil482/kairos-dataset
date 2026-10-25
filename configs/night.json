@@ -1,0 +1,31 @@
+{
+  "seed": 42,
+  "folds": 3,
+  "threads": 8,
+  "expected": {"train": 71395, "test": 17623},
+  "max_training_hours": 16,
+  "final_buffer_hours": 2,
+  "catboost": [
+    {"depth": 6, "iterations": 800, "learning_rate": 0.06, "class_power": 0.0},
+    {"depth": 6, "iterations": 800, "learning_rate": 0.06, "class_power": 0.5},
+    {"depth": 8, "iterations": 1000, "learning_rate": 0.04, "class_power": 0.5}
+  ],
+  "tfidf": {"word_features": 60000, "char_features": 60000, "min_df": 3, "C": [1.0, 4.0]},
+  "text_encoder": {
+    "repo": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "revision": "4328cf26390c98c5e3c738b4460a05b95f4911f5",
+    "files": ["config.json", "model.safetensors", "sentencepiece.bpe.model", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json"],
+    "batch_size": 24,
+    "max_length": 128,
+    "max_chunks": 12
+  },
+  "image_encoder": {
+    "repo": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "files": ["config.json", "pytorch_model.bin", "preprocessor_config.json"],
+    "batch_size": 32,
+    "max_images_per_post": 4
+  },
+  "bootstrap_samples": 300,
+  "enable_images": true
+}

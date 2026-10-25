@@ -1,0 +1,145 @@
+{
+  "format_version": 1,
+  "config": {
+    "seed": 42,
+    "folds": 3,
+    "threads": 8,
+    "expected": {
+      "train": 71395,
+      "test": 17623
+    },
+    "catboost": [
+      {
+        "depth": 6,
+        "iterations": 800,
+        "learning_rate": 0.06,
+        "class_power": 0.0
+      },
+      {
+        "depth": 6,
+        "iterations": 800,
+        "learning_rate": 0.06,
+        "class_power": 0.5
+      },
+      {
+        "depth": 8,
+        "iterations": 1000,
+        "learning_rate": 0.04,
+        "class_power": 0.5
+      }
+    ],
+    "text_encoder": {
+      "repo": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "revision": "4328cf26390c98c5e3c738b4460a05b95f4911f5",
+      "files": [
+        "config.json",
+        "model.safetensors",
+        "sentencepiece.bpe.model",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "special_tokens_map.json"
+      ],
+      "batch_size": 24,
+      "max_length": 128,
+      "max_chunks": 12
+    },
+    "image_encoder": {
+      "repo": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "files": [
+        "config.json",
+        "pytorch_model.bin",
+        "preprocessor_config.json"
+      ],
+      "batch_size": 32,
+      "max_images_per_post": 4
+    },
+    "enable_images": true,
+    "bootstrap_samples": 300
+  },
+  "specs": {
+    "baseline": {
+      "name": "baseline",
+      "family": "baseline"
+    },
+    "history-1": {
+      "name": "history-1",
+      "family": "history",
+      "parameters": {
+        "depth": 6,
+        "iterations": 800,
+        "learning_rate": 0.06,
+        "class_power": 0.5
+      }
+    },
+    "refine-r05-text-adapt-last4": {
+      "name": "refine-r05-text-adapt-last4",
+      "family": "finetune",
+      "last_layers": 4,
+      "epochs": 2,
+      "batch_size": 16,
+      "max_length": 256,
+      "encoder_lr": 2e-05,
+      "head_lr": 0.0008,
+      "head_width": 256,
+      "dropout": 0.2,
+      "weight_decay": 0.01,
+      "warmup_fraction": 0.1,
+      "class_power": 0.5,
+      "gradient_clip": 1.0,
+      "precision": "bfloat16",
+      "checkpoint_steps": 500
+    },
+    "refine-r07-adapted-history128": {
+      "name": "refine-r07-adapted-history128",
+      "family": "multimodal",
+      "parameters": {
+        "depth": 8,
+        "iterations": 2800,
+        "learning_rate": 0.03,
+        "class_power": 0.5
+      },
+      "pca_components": 128,
+      "l2_leaf_reg": 10
+    },
+    "refine-r08-text-adapt-last12-e3": {
+      "name": "refine-r08-text-adapt-last12-e3",
+      "family": "finetune",
+      "last_layers": 12,
+      "epochs": 3,
+      "batch_size": 16,
+      "max_length": 256,
+      "encoder_lr": 1e-05,
+      "head_lr": 0.0008,
+      "head_width": 256,
+      "dropout": 0.2,
+      "weight_decay": 0.01,
+      "warmup_fraction": 0.1,
+      "class_power": 0.5,
+      "gradient_clip": 1.0,
+      "precision": "bfloat16",
+      "checkpoint_steps": 500
+    }
+  },
+  "weights": {
+    "baseline": 0.12800000000000003,
+    "history-1": 0.2,
+    "refine-r07-adapted-history128": 0.5120000000000001,
+    "refine-r08-text-adapt-last12-e3": 0.16000000000000003
+  },
+  "class_scales": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "reference_prediction_sha256": "f3d5ec7aecec8e8db15770bbf46a03811e71f68083c240338f854e474c500278",
+  "source_manifest_fingerprint": "7c6ec27e8a200dd0b1f7cace9d2a08e79485bcdb5160fd9fd9e2f068971cdf03",
+  "frozen_source_sha256": {
+    "solution/frozen/__init__.py": "07a4d11420bfc61a1b7ce1f9d71cc82ca1375b9ae9d49530809c983a66fe9973",
+    "solution/frozen/adapted.py": "1929d2c2f9b71812c3b888a557eec6b02d581ac35df9122a9952d509f4dd0d5f",
+    "solution/frozen/finetune.py": "6c674d22e02851cc02c93f40068d67b771fe8238420a1a515cca278ec7e331fb",
+    "solution/frozen/graph.py": "397e78b6695e8bc40beb1bc48351c0264d848036a2fb25951b79495159769ba3",
+    "solution/frozen/history.py": "7358b19005df137284b3092620c806fa6de9b697dbb29e17c1383bdb36824b59",
+    "solution/frozen/nn_utils.py": "fbb3678901c3517509fe778e1f33cefc9e0a3f6f0f146fbb7412c19544d0d1b1"
+  }
+}
