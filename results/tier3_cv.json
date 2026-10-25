@@ -1,0 +1,107 @@
+{
+  "seed": 42,
+  "n_splits": 5,
+  "metrics": {
+    "lightgbm": {
+      "oof": {
+        "macro_f1": 0.6436,
+        "qwk": 0.5714,
+        "accuracy": 0.6877
+      },
+      "folds": [
+        {
+          "macro_f1": 0.6415,
+          "qwk": 0.5716,
+          "accuracy": 0.6844
+        },
+        {
+          "macro_f1": 0.6443,
+          "qwk": 0.571,
+          "accuracy": 0.6905
+        },
+        {
+          "macro_f1": 0.6529,
+          "qwk": 0.5779,
+          "accuracy": 0.6993
+        },
+        {
+          "macro_f1": 0.6355,
+          "qwk": 0.5671,
+          "accuracy": 0.6734
+        },
+        {
+          "macro_f1": 0.6436,
+          "qwk": 0.5696,
+          "accuracy": 0.6908
+        }
+      ],
+      "test": {
+        "macro_f1": 0.6357,
+        "qwk": 0.5618,
+        "accuracy": 0.6791
+      },
+      "top_features": [
+        [
+          "level",
+          4642.0
+        ],
+        [
+          "roll_mean_5",
+          2848.0
+        ],
+        [
+          "log_followers",
+          2820.0
+        ],
+        [
+          "age_days",
+          2756.0
+        ],
+        [
+          "days_since_prev",
+          2741.0
+        ],
+        [
+          "content_type_rarity",
+          2548.0
+        ],
+        [
+          "days_since_first_post",
+          2443.0
+        ],
+        [
+          "roll_trend_5",
+          2289.0
+        ],
+        [
+          "emb_pca_02",
+          2282.0
+        ],
+        [
+          "roll_std_all",
+          2172.0
+        ],
+        [
+          "hour_delta_circular",
+          1964.0
+        ],
+        [
+          "roll_std_5",
+          1859.0
+        ],
+        [
+          "emb_pca_03",
+          1742.0
+        ],
+        [
+          "n_words_delta",
+          1697.0
+        ],
+        [
+          "hist_iqr",
+          1677.0
+        ]
+      ]
+    }
+  }
+}

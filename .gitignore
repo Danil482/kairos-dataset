@@ -1,10 +1,15 @@
 # The release goes here and never into git: see README, "Get the data"
+data
 data/*
 !data/.gitkeep
 
-results/
 __pycache__/
 *.pyc
 .venv/
 .idea/
 .vscode/
+
+# Tier work artifacts
+cache/
+my/__pycache__/
+catboost_info/

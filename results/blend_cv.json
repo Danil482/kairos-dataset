@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "best_weight_tier2": 0.4,
+  "test": {
+    "macro_f1": 0.6385,
+    "qwk": 0.5649,
+    "accuracy": 0.6823
+  }
+}

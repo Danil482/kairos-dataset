@@ -1,0 +1,209 @@
+{
+  "seed": 42,
+  "n_splits": 5,
+  "metrics": {
+    "catboost": {
+      "oof": {
+        "macro_f1": 0.5945,
+        "qwk": 0.5364,
+        "accuracy": 0.6018
+      },
+      "folds": [
+        {
+          "macro_f1": 0.5961,
+          "qwk": 0.5403,
+          "accuracy": 0.6033
+        },
+        {
+          "macro_f1": 0.5932,
+          "qwk": 0.5335,
+          "accuracy": 0.6021
+        },
+        {
+          "macro_f1": 0.5972,
+          "qwk": 0.5341,
+          "accuracy": 0.6047
+        },
+        {
+          "macro_f1": 0.5866,
+          "qwk": 0.5382,
+          "accuracy": 0.5898
+        },
+        {
+          "macro_f1": 0.599,
+          "qwk": 0.5357,
+          "accuracy": 0.6091
+        }
+      ],
+      "test": {
+        "macro_f1": 0.5859,
+        "qwk": 0.5249,
+        "accuracy": 0.5939
+      },
+      "top_features": [
+        [
+          "level",
+          14.748487412353427
+        ],
+        [
+          "content_type",
+          12.05993276678207
+        ],
+        [
+          "content_type_rarity",
+          5.147048537903925
+        ],
+        [
+          "n_words_delta",
+          5.026770663477387
+        ],
+        [
+          "n_chars_delta",
+          4.903732293540071
+        ],
+        [
+          "roll_mean_5",
+          4.860317917074059
+        ],
+        [
+          "log_followers",
+          3.681068544211196
+        ],
+        [
+          "days_since_prev",
+          3.6106357684963397
+        ],
+        [
+          "days_since_first_post",
+          3.062543536255412
+        ],
+        [
+          "posts_per_week_90d",
+          2.816387128547266
+        ],
+        [
+          "roll_std_all",
+          2.6175245001549188
+        ],
+        [
+          "is_textless_vs_author",
+          2.3814535856899193
+        ],
+        [
+          "roll_trend_5",
+          2.3569167420093757
+        ],
+        [
+          "n_mentions_delta",
+          2.211817606989739
+        ],
+        [
+          "has_question_vs_author",
+          2.16952726886153
+        ]
+      ]
+    },
+    "lightgbm": {
+      "oof": {
+        "macro_f1": 0.6191,
+        "qwk": 0.5419,
+        "accuracy": 0.6595
+      },
+      "folds": [
+        {
+          "macro_f1": 0.6188,
+          "qwk": 0.5444,
+          "accuracy": 0.6589
+        },
+        {
+          "macro_f1": 0.6164,
+          "qwk": 0.5398,
+          "accuracy": 0.6577
+        },
+        {
+          "macro_f1": 0.6272,
+          "qwk": 0.5495,
+          "accuracy": 0.6708
+        },
+        {
+          "macro_f1": 0.6146,
+          "qwk": 0.5403,
+          "accuracy": 0.6489
+        },
+        {
+          "macro_f1": 0.6184,
+          "qwk": 0.5358,
+          "accuracy": 0.6614
+        }
+      ],
+      "test": {
+        "macro_f1": 0.6103,
+        "qwk": 0.5294,
+        "accuracy": 0.6484
+      },
+      "top_features": [
+        [
+          "days_since_prev",
+          12208.0
+        ],
+        [
+          "roll_trend_5",
+          11785.0
+        ],
+        [
+          "age_days",
+          11593.0
+        ],
+        [
+          "log_followers",
+          11452.0
+        ],
+        [
+          "days_since_first_post",
+          11320.0
+        ],
+        [
+          "content_type_rarity",
+          11145.0
+        ],
+        [
+          "roll_std_5",
+          10923.0
+        ],
+        [
+          "roll_std_all",
+          10643.0
+        ],
+        [
+          "hist_iqr",
+          10283.0
+        ],
+        [
+          "hour_delta_circular",
+          10249.0
+        ],
+        [
+          "roll_mean_5",
+          10056.0
+        ],
+        [
+          "level",
+          9525.0
+        ],
+        [
+          "has_question_vs_author",
+          8374.0
+        ],
+        [
+          "n_words_delta",
+          8114.0
+        ],
+        [
+          "n_chars_delta",
+          7752.0
+        ]
+      ]
+    }
+  },
+  "best": "lightgbm"
+}
