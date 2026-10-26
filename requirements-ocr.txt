@@ -1,0 +1,4 @@
+# Install the matching CUDA torchvision from PyTorch's cu128 index first.
+torchvision==0.25.0+cu128
+easyocr==1.7.2
+opencv-python-headless==4.11.0.86

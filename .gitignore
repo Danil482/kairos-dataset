@@ -8,3 +8,27 @@ __pycache__/
 .venv/
 .idea/
 .vscode/
+
+# Local setup, downloaded archives and private course references
+.tools/
+archives/
+.local/
+.env
+.env.*
+.ssh/
+*.pem
+*.key
+id_ed25519*
+*.log
+
+# Rendered page images are temporary QA artifacts, not submission files
+tmp/
+
+# Publish only the current aggregate report, not old reports or local manifests
+output/*
+!output/pdf/
+output/pdf/*
+!output/pdf/Social_Media_Analytics_Sushcheva_Maria.pdf
+
+# Private comparison notes about supplied third-party course work
+REVIEW_AND_METHOD_RU.md

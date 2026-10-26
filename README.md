@@ -23,6 +23,27 @@ reproduces the label, trains a baseline and scores predictions. The data is not
 here. Request it on the [dataset page](https://kairos-labs.ai/dataset/) and unpack
 it into `data/`.
 
+## Implementation by Maria Sushcheva
+
+Branch: `sushcheva-maria`.
+
+- [Research report with figures and official test results (PDF)](output/pdf/Social_Media_Analytics_Sushcheva_Maria.pdf)
+- [Setup and reproduction instructions (Russian)](RUNBOOK_RU.md)
+- [Experiment history and limitations (Russian)](IMPROVEMENT_PLAN_RU.md)
+
+The implementation combines strictly earlier author history, multilingual E5 text
+embeddings, SigLIP 2 image embeddings and ordinal CatBoost classifiers. The frozen
+ensemble obtained **macro-F1 0.6587, QWK 0.5924 and accuracy 0.7002** on the official
+test set of 17,623 posts from 824 authors. Its predictions and decision rule were
+fixed before scoring; test labels were not used for tuning. The development OOF
+score of 0.6665 is a different evaluation and is not the test score.
+
+`evaluate_test.cmd` evaluates locally saved models; it does not download trained
+models from this repository. Reproduce the training stages in the runbook first.
+The repository includes implementation, 47 tests, dependency specifications and
+the aggregate report. Dataset files, post-level predictions, trained weights,
+embedding caches, archive passwords and access codes are not included.
+
 ## The task
 
 An example first. Author A usually gets about 20 reactions on a post; a post with 80

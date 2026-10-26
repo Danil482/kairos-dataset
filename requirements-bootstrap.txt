@@ -1,0 +1,2 @@
+# Optional: extraction of just tables using ranged reads of the encrypted archive.
+py7zr==1.1.4
