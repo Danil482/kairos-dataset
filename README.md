@@ -23,6 +23,46 @@ reproduces the label, trains a baseline and scores predictions. The data is not
 here. Request it on the [dataset page](https://kairos-labs.ai/dataset/) and unpack
 it into `data/`.
 
+## Lab 1 solution
+
+Author: Кожухарь Богдан Александрович, see [AUTHOR.md](AUTHOR.md).
+
+A stack of four models: CatBoost on post features and text, an MLP on frozen E5
+vectors, and two models of the author's previous posts. A logistic regression
+combines them, and class weights are tuned for macro-F1.
+
+| Full official test | Macro-F1 | QWK | Accuracy |
+|---|---:|---:|---:|
+| Official baseline | 0.5410 | 0.4576 | 0.5465 |
+| Our solution | **0.6683** | **0.6134** | **0.7070** |
+
+- [`lab1_solution.ipynb`](lab1_solution.ipynb): method, EDA, ablation, results.
+- [`Lab1Report.docx`](Lab1Report.docx): short report: what was done, approaches tried, results.
+- [`lab1_submission/`](lab1_submission/README.md): predictions, test metrics, selected model version.
+- `improved.py`: entry point for `prepare`, `train` and `predict`.
+- [`solution/`](solution/README.md): feature code, model code and the fixed configuration.
+- `kairos/`: the original loader, label and metrics, plus four modules used by our models.
+
+`baseline.py`, `evaluate.py` and the original `kairos` modules are unchanged.
+
+### Run
+
+Python 3.12. Install with `uv sync --frozen` or `pip install -r requirements.txt`.
+Unpack the core release into `data/`, videos are not needed.
+
+```bash
+python improved.py prepare
+python improved.py train --model-dir models/retrained --output lab1_submission_reproduced
+python improved.py predict --model-dir models/retrained --output lab1_submission_reproduced
+python evaluate.py --predictions lab1_submission_reproduced/predictions.csv
+```
+
+Weights and feature caches are not in the repository. Text and images are encoded
+locally with the E5 and CLIP revisions pinned in `solution/config.json`. The full
+encoding from raw data was not rerun after cleanup. `--cache-dir` moves only the
+four feature tables, encoder vectors stay in `work/`. An interrupted `prepare`
+resumes from the last saved batch. Results may differ slightly on other hardware.
+
 ## The task
 
 An example first. Author A usually gets about 20 reactions on a post; a post with 80

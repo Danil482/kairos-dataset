@@ -1,0 +1,47 @@
+{
+  "test": {
+    "macro_f1": 0.6683124238019936,
+    "accuracy": 0.7069738410032345,
+    "qwk": 0.6134277390980478,
+    "confusion_matrix": [
+      [
+        1861,
+        1649,
+        31
+      ],
+      [
+        1314,
+        8114,
+        1063
+      ],
+      [
+        42,
+        1065,
+        2484
+      ]
+    ],
+    "classes": {
+      "below": {
+        "precision": 0.578489275722723,
+        "recall": 0.5255577520474443,
+        "f1-score": 0.5507546611423498,
+        "support": 3541
+      },
+      "typical": {
+        "precision": 0.7493535278906539,
+        "recall": 0.7734248403393384,
+        "f1-score": 0.7611989305314508,
+        "support": 10491
+      },
+      "above": {
+        "precision": 0.694242593627725,
+        "recall": 0.6917293233082706,
+        "f1-score": 0.6929836797321802,
+        "support": 3591
+      }
+    }
+  },
+  "scope": "Official test previously seen with the2026-10-22 model; this is not a new independent test",
+  "predictions_sha256": "2732511ec9d899428ae81ef2c7102499e3775b46d05910087716eaa925e6abc8",
+  "test_rows": 17623
+}

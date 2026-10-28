@@ -1,10 +1,24 @@
-# The release goes here and never into git: see README, "Get the data"
+# Private release and downloaded archives
 data/*
+!data/README.md
 !data/.gitkeep
-
+downloads/
+*.7z.*
+# Local encodings, fitted weights and temporary results
+work/
+runs/
+models/
+lab1_submission_reproduced/
 results/
+.cache/
+.tmp/
+.jupyter/
+.venv/
 __pycache__/
 *.pyc
-.venv/
+.ipynb_checkpoints/
+.DS_Store
 .idea/
 .vscode/
+*.lock
+!uv.lock

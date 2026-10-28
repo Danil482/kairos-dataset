@@ -1,0 +1,55 @@
+{
+  "model": "Four-component context stack",
+  "source_run": "stack_final_v2",
+  "source_frozen_id": "940fc42123867e2714440021c9c7a8683a82ea004f390b995359b17d611d376b",
+  "official_test_macro_f1": 0.6683124238019936,
+  "model_sha256": "d4f43e216e28db880eb48a2d05b8ab74b94449cd2c07f165d7096a03477a3204",
+  "config_sha256": "0fe5c78e135132204c3e546870695cc9b2fbc4805edbe4a6b954ec97cc18f4c7",
+  "decision_weights": [
+    1.42618065428148,
+    1.0,
+    1.7246083823764358
+  ],
+  "development": {
+    "seed42_macro_f1": 0.6861468013720202,
+    "seed137_macro_f1": 0.6847876261515721,
+    "pooled_author_cv_macro_f1": 0.6761886786137278
+  },
+  "limitations": "Development/folds reused; official test previously seen; fixed selected model, no new evaluation during cleanup.",
+  "code_version": "selected-stack-b3df41d7e506",
+  "upstream_repository": "https://github.com/Danil482/kairos-dataset",
+  "upstream_commit": "7b3fb6ee607fc85e8f6a8eaa6d71132c864393fe",
+  "source_sha256": {
+    "baseline.py": "b01b923798f2263a58ba63945347b0e620cdd92f21a7d447dc062d267a88fae1",
+    "evaluate.py": "d0f4060a9d527a9c4c7ecb4004d06a1ec9dfe6a5537a03c5775d6c44280f8355",
+    "improved.py": "d573819e2072ba6bcaf3b0dc1432fbf252594b973fbcb36cee5ac2ed1610f287",
+    "kairos/__init__.py": "ba28074929d349f3aac24fbe3ae901be760e2ed48c56dd70b2f23664044d9545",
+    "kairos/catboost_portable.py": "b0a478ed011a5714ba8e1528e638cf9333e65e432945e41d3ea02bcfc2852ea7",
+    "kairos/data.py": "e4b3c192dd4d8f8efe9f3dc2f4638b47f52155209ae655fb94e2deb29005e3e8",
+    "kairos/features.py": "fc4011507f9dc1479f2574338e83a44459924e8c460b758cffdd3830973bb2ea",
+    "kairos/history_pool.py": "3871761e271d3d0268208f6fa956223b721b0f2bd11599bdaf36d8744ac224c8",
+    "kairos/label.py": "e8f617df96c449cff98a0c03089f1bdd322aff32c02e3327cdbaad0a94c3ffc7",
+    "kairos/metrics.py": "2435234060ca3d59037ded4dbee6edbe756610f8bc666a46e5875af4a1057f71",
+    "kairos/neural.py": "0d121482de09abd405807edcaac19dbf23f31d070b462f6dad1224870c2464dc",
+    "kairos/provenance.py": "946b4c019077184b4fc34d6ec141bdd8dce2b14e7496af6868dbebba5ed1dbf1",
+    "solution/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "solution/content.py": "43ca76a7b2ae128b33b44de2c6854e22219f38fcc635fd9b9d033130fddb8a10",
+    "solution/models.py": "08c481f1bde944868ff368e438b48095ee5d0d9b7140218c72ce486ebeb015e0",
+    "solution/prepare.py": "f54f5702b16203afc769225f274a15ef26605c24bee15c051e1c02ece5985f19",
+    "solution/train.py": "5a5873137c49d88d8f002a6d8ea31eae42725c22c86c1d2eebb03f0437e9dac3",
+    "solution/config.json": "0fe5c78e135132204c3e546870695cc9b2fbc4805edbe4a6b954ec97cc18f4c7",
+    "requirements.txt": "9712c5c636d18a20ac695b514433a2030a02b3e9a13e7f1334d6b03ff6ce2819",
+    "pyproject.toml": "25b91ada141e6b9af4fb7515ed1be6875598562fa2a5a953648effa4290434b0",
+    "uv.lock": "19742c5591b60c27b0b29bbd80d5da4d019d7d9b901a862e9a3af64d10a5a58e"
+  },
+  "predictions_sha256": "2732511ec9d899428ae81ef2c7102499e3775b46d05910087716eaa925e6abc8",
+  "reproduction": {
+    "rows": 17623,
+    "converted_weights_csv_exact": true,
+    "full_fixed_recipe_retraining_csv_exact": true,
+    "rebuilt_selected_features_with_cached_encodings_csv_exact": true,
+    "test_evaluator_rerun": false,
+    "fresh_encoder_and_image_inference_rerun": false,
+    "saved_model_predict_with_current_code_csv_exact": true
+  }
+}
