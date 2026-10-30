@@ -1,0 +1,67 @@
+<div id="accuracy-f1-chart">
+  <h2>Accuracy и macro-F1 на тестовых постах</h2>
+  <svg role="img" aria-label="Сравнение accuracy и macro-F1 для базовой модели, ответа typical на все посты и случайных ответов. У стратегии всегда typical accuracy 0,5953, а macro-F1 0,2488."></svg>
+</div>
+
+<style>
+  #accuracy-f1-chart { width: 100%; }
+  #accuracy-f1-chart svg { display: block; width: 100%; height: auto; }
+  #accuracy-f1-chart text { fill: var(--foreground); font-size: 12px; font-weight: 400; }
+  #accuracy-f1-chart .muted { fill: var(--muted-foreground); }
+  #accuracy-f1-chart .frame, #accuracy-f1-chart .grid { stroke: var(--border); stroke-width: 1; fill: none; }
+  #accuracy-f1-chart .accuracy { fill: var(--viz-series-1); }
+  #accuracy-f1-chart .f1 { fill: var(--viz-series-2); }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById('accuracy-f1-chart');
+  const svg = root.querySelector('svg');
+  const rows = [
+    {name: 'Базовая модель', accuracy: 0.5465, f1: 0.5410},
+    {name: 'Всегда typical', accuracy: 0.5953, f1: 0.2488},
+    {name: 'Случайный ответ', accuracy: 0.4386, f1: 0.3319}
+  ];
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent = svg) {
+    const node = document.createElementNS(NS, tag);
+    for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
+    parent.appendChild(node);
+    return node;
+  }
+  function label(x, y, value, extra = {}) {
+    const node = el('text', {x, y, ...extra});
+    node.textContent = value;
+    return node;
+  }
+  function draw() {
+    const width = Math.max(300, Math.round(root.getBoundingClientRect().width));
+    const left = width < 480 ? 92 : 106;
+    const right = 42;
+    const plotWidth = width - left - right;
+    const top = 36;
+    const bottom = 305;
+    svg.setAttribute('viewBox', `0 0 ${width} 330`);
+    svg.replaceChildren();
+    const ticks = width < 480 ? [0, 0.5, 1] : [0, 0.25, 0.5, 0.75, 1];
+    ticks.forEach(t => {
+      const x = left + t * plotWidth;
+      el('line', {x1: x, x2: x, y1: top, y2: bottom, class: 'grid'});
+      label(x, 323, String(t).replace('.', ','), {class: 'muted', 'text-anchor': t === 0 ? 'start' : t === 1 ? 'end' : 'middle'});
+    });
+    rows.forEach((row, i) => {
+      const baseY = 60 + i * 91;
+      label(0, baseY - 17, row.name);
+      [['accuracy', 'Accuracy', baseY], ['f1', 'Macro-F1', baseY + 28]].forEach(([key, title, y]) => {
+        label(left - 8, y + 12, title, {'text-anchor': 'end', class: 'muted'});
+        const barWidth = row[key] * plotWidth;
+        el('rect', {x: left, y, width: barWidth, height: 17, class: key});
+        label(left + barWidth + 5, y + 13, row[key].toFixed(4).replace('.', ','), {'font-variant-numeric': 'tabular-nums'});
+      });
+    });
+    el('rect', {x: left, y: top, width: plotWidth, height: bottom - top, class: 'frame'});
+  }
+  new ResizeObserver(draw).observe(root);
+  draw();
+})();
+</script>

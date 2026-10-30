@@ -1,6 +1,12 @@
-# The release goes here and never into git: see README, "Get the data"
+# The release goes here and never into git: see README, "First run"
 data/*
 !data/.gitkeep
+
+lab1_core.7z
+lab1_core.7z.*
+lab1_video.7z
+lab1_video.7z.*
+.DS_Store
 
 results/
 __pycache__/

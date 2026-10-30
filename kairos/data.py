@@ -26,7 +26,8 @@ def _release(data_dir: Path | str) -> Path:
         raise SystemExit(
             f"No release in {data_dir}. Request the password and download the core "
             "archive at https://kairos-labs.ai/dataset/, then unpack it there:\n"
-            f"    7z x lab1_core.7z.001 -o{data_dir}")
+            f"    7z x lab1_core.7z.001 -o{data_dir}"
+        )
     return data_dir
 
 
@@ -41,31 +42,37 @@ def load_posts(data_dir: Path | str = DATA_DIR, own_only: bool = True) -> pd.Dat
     """
     data_dir = _release(data_dir)
     rows = []
-    for f in tqdm(sorted((data_dir / "posts").glob("AUTHOR_*.json")),
-                  desc="posts", unit="file"):
+    for f in tqdm(
+        sorted((data_dir / "posts").glob("AUTHOR_*.json")), desc="posts", unit="file"
+    ):
         feed = json.loads(f.read_text(encoding="utf-8"))
         owner = feed["author"]
-        for p in feed["posts"]:
-            a = p.get("author")
+        for post in feed["posts"]:
+            a = post.get("author")
             own = isinstance(a, dict) and a.get("code") == owner
             if own_only and not own:
                 continue
-            rows.append({
-                "author": owner,
-                "post": p["urn"],
-                "own": own,
-                # `postedAt` is LinkedIn's relative display string ("2yr", "1mo");
-                # the timestamp is `postedDateTimestamp`, in ms since the epoch.
-                "posted_at": p.get("postedDateTimestamp"),
-                "crawled_at": feed.get("crawledAt"),
-                # The provider omits a counter at zero, so an absent count is 0.
-                "reactions": int(p.get("totalReactionCount") or 0),
-                "text": p.get("text") or "",
-                "content_type": p.get("contentType") or "unknown",
-            })
+            rows.append(
+                {
+                    "author": owner,
+                    "post": post["urn"],
+                    "own": own,
+                    # `postedAt` is LinkedIn's relative display string ("2yr", "1mo");
+                    # the timestamp is `postedDateTimestamp`, in ms since the epoch.
+                    "posted_at": post.get("postedDateTimestamp"),
+                    "crawled_at": feed.get("crawledAt"),
+                    # The provider omits a counter at zero, so an absent count is 0.
+                    "reactions": int(post.get("totalReactionCount") or 0),
+                    "text": post.get("text") or "",
+                    "content_type": post.get("contentType") or "unknown",
+                }
+            )
     df = pd.DataFrame(rows)
     df["posted_at"] = pd.to_datetime(df["posted_at"], unit="ms", utc=True)
-    df["crawled_at"] = pd.to_datetime(df["crawled_at"], utc=True, errors="coerce")
+    # The release mixes ISO timestamps with and without fractional seconds.
+    df["crawled_at"] = pd.to_datetime(
+        df["crawled_at"], format="ISO8601", utc=True, errors="coerce"
+    )
     return df
 
 
