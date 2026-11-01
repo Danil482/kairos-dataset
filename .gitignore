@@ -8,3 +8,7 @@ __pycache__/
 .venv/
 .idea/
 .vscode/
+.cache/
+*.7z.*
+*.joblib
+*.cbm

@@ -1,0 +1,4 @@
+-r requirements-lab1.txt
+torch==2.8.0
+transformers==4.54.1
+sentence-transformers==5.0.0
