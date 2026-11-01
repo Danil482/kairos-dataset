@@ -1,0 +1,32 @@
+{
+  "selected": {
+    "model": "richer",
+    "below_weight": 1.1,
+    "typical_weight": 1.6,
+    "mean_macro_f1": 0.6542886470903394
+  },
+  "incumbent_mean": 0.6506205415731644,
+  "improvement_by_split": [
+    0.00598204889202647,
+    0.0018501824276451195,
+    0.0031720852318535275
+  ],
+  "key_sha256": "f559a0601bc276997fe758eecfdfbb8af38c76510472fa660cb1dc5476745bba",
+  "parameters": {
+    "v2": {},
+    "smooth": {
+      "max_leaf_nodes": 15,
+      "l2_regularization": 3.0,
+      "learning_rate": 0.05,
+      "max_iter": 600
+    },
+    "richer": {
+      "max_leaf_nodes": 63,
+      "min_samples_leaf": 30,
+      "l2_regularization": 5.0,
+      "learning_rate": 0.05,
+      "max_iter": 600
+    }
+  },
+  "test_evaluation_recommended": true
+}

@@ -1,0 +1,38 @@
+{
+  "selection": {
+    "model": "combined",
+    "text_weight": 0.15,
+    "typical_weight": 1.6,
+    "mean_validation_macro_f1": 0.6506205415731644
+  },
+  "test": {
+    "macro_f1": 0.6412,
+    "qwk": 0.5699,
+    "accuracy": 0.686,
+    "f1_by_class": [
+      0.5184969414506263,
+      0.7487003341997772,
+      0.6565242832065535
+    ],
+    "confusion_matrix": [
+      [
+        1780,
+        1719,
+        42
+      ],
+      [
+        1467,
+        8065,
+        959
+      ],
+      [
+        78,
+        1269,
+        2244
+      ]
+    ]
+  },
+  "n_test": 17623,
+  "python": "3.14.8",
+  "sklearn": "1.9.1"
+}

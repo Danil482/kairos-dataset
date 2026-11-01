@@ -1,0 +1,276 @@
+{
+  "seed": 42,
+  "incumbent": 0.6500611052341434,
+  "candidates": [
+    {
+      "model": "v2",
+      "below_weight": 0.9,
+      "typical_weight": 1.4,
+      "macro_f1": 0.648625640329036
+    },
+    {
+      "model": "v2",
+      "below_weight": 0.9,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6487756125488607
+    },
+    {
+      "model": "v2",
+      "below_weight": 0.9,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6425491768613671
+    },
+    {
+      "model": "v2",
+      "below_weight": 1.0,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6491145719342531
+    },
+    {
+      "model": "v2",
+      "below_weight": 1.0,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6500611052341434
+    },
+    {
+      "model": "v2",
+      "below_weight": 1.0,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6476432415685203
+    },
+    {
+      "model": "v2",
+      "below_weight": 1.1,
+      "typical_weight": 1.4,
+      "macro_f1": 0.64587502387475
+    },
+    {
+      "model": "v2",
+      "below_weight": 1.1,
+      "typical_weight": 1.6,
+      "macro_f1": 0.650433813574833
+    },
+    {
+      "model": "v2",
+      "below_weight": 1.1,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6491265255219923
+    },
+    {
+      "model": "smooth",
+      "below_weight": 0.9,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6493799099179495
+    },
+    {
+      "model": "smooth",
+      "below_weight": 0.9,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6502434948738147
+    },
+    {
+      "model": "smooth",
+      "below_weight": 0.9,
+      "typical_weight": 1.8,
+      "macro_f1": 0.645508798880432
+    },
+    {
+      "model": "smooth",
+      "below_weight": 1.0,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6474941055397937
+    },
+    {
+      "model": "smooth",
+      "below_weight": 1.0,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6526383145172112
+    },
+    {
+      "model": "smooth",
+      "below_weight": 1.0,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6511045769323737
+    },
+    {
+      "model": "smooth",
+      "below_weight": 1.1,
+      "typical_weight": 1.4,
+      "macro_f1": 0.645817844012986
+    },
+    {
+      "model": "smooth",
+      "below_weight": 1.1,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6517075152683961
+    },
+    {
+      "model": "smooth",
+      "below_weight": 1.1,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6523328635502162
+    },
+    {
+      "model": "richer",
+      "below_weight": 0.9,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6525740603310582
+    },
+    {
+      "model": "richer",
+      "below_weight": 0.9,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6479816150089491
+    },
+    {
+      "model": "richer",
+      "below_weight": 0.9,
+      "typical_weight": 1.8,
+      "macro_f1": 0.641887890432754
+    },
+    {
+      "model": "richer",
+      "below_weight": 1.0,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6541796393967664
+    },
+    {
+      "model": "richer",
+      "below_weight": 1.0,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6528769879946585
+    },
+    {
+      "model": "richer",
+      "below_weight": 1.0,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6463897415595774
+    },
+    {
+      "model": "richer",
+      "below_weight": 1.1,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6515978027387607
+    },
+    {
+      "model": "richer",
+      "below_weight": 1.1,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6560431541261699
+    },
+    {
+      "model": "richer",
+      "below_weight": 1.1,
+      "typical_weight": 1.8,
+      "macro_f1": 0.651773497114864
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 0.9,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6492974736254683
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 0.9,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6495239128621292
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 0.9,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6470727010298573
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 1.0,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6496877150867931
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 1.0,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6512981941097741
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 1.0,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6515997974302034
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 1.1,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6475343908048311
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 1.1,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6506361497273078
+    },
+    {
+      "model": "blend_smooth",
+      "below_weight": 1.1,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6535092488126195
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 0.9,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6521084263777284
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 0.9,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6492184083329101
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 0.9,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6440792386490942
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 1.0,
+      "typical_weight": 1.4,
+      "macro_f1": 0.651365368314832
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 1.0,
+      "typical_weight": 1.6,
+      "macro_f1": 0.65210934063003
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 1.0,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6491018164214905
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 1.1,
+      "typical_weight": 1.4,
+      "macro_f1": 0.6493307743636253
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 1.1,
+      "typical_weight": 1.6,
+      "macro_f1": 0.6531116874573689
+    },
+    {
+      "model": "blend_richer",
+      "below_weight": 1.1,
+      "typical_weight": 1.8,
+      "macro_f1": 0.6524651970820933
+    }
+  ]
+}
