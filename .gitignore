@@ -3,6 +3,36 @@ data/*
 !data/.gitkeep
 
 results/
+# Publish only the aggregate report; detailed runs contain dataset identifiers.
+reports/*
+!reports/summary.json
+configs/stage2_folds.json
+
+# Local data, model caches, downloads and credentials stay on this computer.
+.DS_Store
+.ipynb_checkpoints/
+.env
+.env.*
+*.pem
+*.key
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.z[0-9][0-9]
+*.7z.[0-9]*
+*.joblib
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.parquet
+*.pt
+*.pth
+*.safetensors
+
 __pycache__/
 *.pyc
 .venv/

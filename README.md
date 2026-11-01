@@ -18,6 +18,9 @@
 
 </div>
 
+**Solution branch:** [reproducible experiments and results](README_SOLUTION.md) ·
+[explanatory notebook](solution.ipynb).
+
 This repository is the code half of the Kairos Dataset: it reads the release,
 reproduces the label, trains a baseline and scores predictions. The data is not
 here. Request it on the [dataset page](https://kairos-labs.ai/dataset/) and unpack

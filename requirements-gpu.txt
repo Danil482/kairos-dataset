@@ -1,0 +1,12 @@
+# Install inside the official PyTorch 2.8 / CUDA 12.8 environment.
+# Keep its preinstalled torch build; these releases accept torch 2.8.
+-r requirements-lock.txt
+torch==2.8.0+cu128
+sentence-transformers==5.1.2
+transformers==4.57.1
+# Model-loading stack observed in the successful Runpod environment.
+huggingface-hub==0.36.2
+tokenizers==0.22.2
+safetensors==0.8.0
+regex==2026.9.29
+hf-xet==1.7.0

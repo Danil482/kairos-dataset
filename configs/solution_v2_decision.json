@@ -1,0 +1,12 @@
+{
+  "base_config": "configs/solution_v2.json",
+  "base_config_sha256": "fa0158eb70b4bca3635911d6ea67f69f95d07ab176a6d9c16177222940123bf4",
+  "base_output": "results/v2",
+  "output": "results/v2_decision",
+  "weights": [
+    0.8,
+    1.0,
+    0.8
+  ],
+  "search_report_sha256": "e491940b31f5b7f0bbe32becd7bedbcec5294914282671f559c0e8d15488a161"
+}
