@@ -1,0 +1,447 @@
+{
+  "split": "validation authors within official train, seed 42",
+  "validation_authors": 659,
+  "validation_posts": 14548,
+  "labels_sha256": "7a8ffd2c2b954569225469b69506fa38d61242cdb4202262453d8b4d84450501",
+  "without_embeddings_macro_f1": 0.6562,
+  "selected_experiment": "corrected-timestamps-with-e5",
+  "test_used_for_selection": false,
+  "experiments": [
+    {
+      "experiment": "validation-depth6",
+      "profile_normalization": "complete_markers_only",
+      "depth": 6,
+      "iterations": 1578,
+      "post_components": null,
+      "profile_components": null,
+      "embeddings": false,
+      "initial_history_posts": 0,
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6091,
+          "qwk": 0.5582,
+          "accuracy": 0.615
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5525,
+          "accuracy": 0.6294
+        },
+        "selected_blend": {
+          "macro_f1": 0.6508,
+          "qwk": 0.5906,
+          "accuracy": 0.6784
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.6507737406742087,
+        "tree_weight": 0.5,
+        "class_weights": [
+          0.8,
+          1.0,
+          0.8
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "validation-e5",
+      "profile_normalization": "complete_markers_only",
+      "depth": 6,
+      "iterations": 1784,
+      "post_components": 64,
+      "profile_components": 16,
+      "embeddings": true,
+      "initial_history_posts": 0,
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6386,
+          "qwk": 0.5947,
+          "accuracy": 0.6466
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5525,
+          "accuracy": 0.6294
+        },
+        "selected_blend": {
+          "macro_f1": 0.6668,
+          "qwk": 0.6071,
+          "accuracy": 0.6993
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.6668294871601442,
+        "tree_weight": 0.8,
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "validation-e5-history64",
+      "profile_normalization": "complete_markers_only",
+      "depth": 6,
+      "iterations": 1752,
+      "post_components": 64,
+      "profile_components": 16,
+      "embeddings": true,
+      "initial_history_posts": 20595,
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6357,
+          "qwk": 0.5909,
+          "accuracy": 0.6437
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5525,
+          "accuracy": 0.6294
+        },
+        "selected_blend": {
+          "macro_f1": 0.6656,
+          "qwk": 0.6015,
+          "accuracy": 0.7097
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.6655558965864984,
+        "tree_weight": 0.8,
+        "class_weights": [
+          0.6,
+          1.0,
+          0.6
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "validation-e5-history128",
+      "profile_normalization": "complete_markers_only",
+      "depth": 6,
+      "iterations": 1887,
+      "post_components": 128,
+      "profile_components": 32,
+      "embeddings": true,
+      "initial_history_posts": 20595,
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6393,
+          "qwk": 0.5948,
+          "accuracy": 0.6481
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5525,
+          "accuracy": 0.6294
+        },
+        "selected_blend": {
+          "macro_f1": 0.6636,
+          "qwk": 0.6031,
+          "accuracy": 0.6971
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.6635919718074862,
+        "tree_weight": 0.8,
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "validation-e5-history128-depth8",
+      "profile_normalization": "complete_markers_only",
+      "depth": 8,
+      "iterations": 1216,
+      "post_components": 128,
+      "profile_components": 32,
+      "embeddings": true,
+      "initial_history_posts": 20595,
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6427,
+          "qwk": 0.5959,
+          "accuracy": 0.6554
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5525,
+          "accuracy": 0.6294
+        },
+        "selected_blend": {
+          "macro_f1": 0.6614,
+          "qwk": 0.5978,
+          "accuracy": 0.7002
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.661355404211918,
+        "tree_weight": 0.7000000000000001,
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "validation-clean-text",
+      "profile_normalization": "complete_and_truncated_codes",
+      "depth": 6,
+      "iterations": 1780,
+      "post_components": null,
+      "profile_components": null,
+      "embeddings": false,
+      "initial_history_posts": 0,
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6115,
+          "qwk": 0.56,
+          "accuracy": 0.6181
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5519,
+          "accuracy": 0.6295
+        },
+        "selected_blend": {
+          "macro_f1": 0.6578,
+          "qwk": 0.5984,
+          "accuracy": 0.6869
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.657831617288104,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.75
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "validation-final",
+      "profile_normalization": "complete_and_truncated_codes",
+      "depth": 6,
+      "iterations": 2171,
+      "post_components": 64,
+      "profile_components": 16,
+      "embeddings": true,
+      "initial_history_posts": 20595,
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6436,
+          "qwk": 0.6002,
+          "accuracy": 0.6524
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5519,
+          "accuracy": 0.6295
+        },
+        "selected_blend": {
+          "macro_f1": 0.6689,
+          "qwk": 0.6099,
+          "accuracy": 0.7022
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.6688688490045474,
+        "tree_weight": [
+          0.6,
+          0.8,
+          1.0
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "boosting-depth-8",
+      "profile_normalization": "complete_markers_only",
+      "depth": 8,
+      "iterations": 912,
+      "embeddings": false,
+      "validation": {
+        "history_catboost": {
+          "macro_f1": 0.6153,
+          "qwk": 0.5613,
+          "accuracy": 0.6241
+        },
+        "selected_blend": {
+          "macro_f1": 0.6545,
+          "qwk": 0.5932,
+          "accuracy": 0.686
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.6544534243169079,
+        "tree_weight": 0.7000000000000001,
+        "class_weights": [
+          0.75,
+          1.0,
+          0.75
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "boosting-depth-10",
+      "profile_normalization": "complete_markers_only",
+      "depth": 10,
+      "iterations": 500,
+      "embeddings": false,
+      "validation": {
+        "history_catboost": {
+          "macro_f1": 0.6147,
+          "qwk": 0.5624,
+          "accuracy": 0.6243
+        },
+        "selected_blend": {
+          "macro_f1": 0.654,
+          "qwk": 0.595,
+          "accuracy": 0.6785
+        }
+      },
+      "fusion": {
+        "validation_macro_f1": 0.6540195209057101,
+        "tree_weight": 0.6000000000000001,
+        "class_weights": [
+          0.9,
+          1.0,
+          0.75
+        ]
+      },
+      "crawl_timestamp_parser": "original loader"
+    },
+    {
+      "experiment": "corrected-timestamps-without-e5",
+      "crawl_timestamp_parser": "mixed ISO UTC",
+      "validation": {
+        "history_catboost": {
+          "macro_f1": 0.6101,
+          "qwk": 0.5606,
+          "accuracy": 0.6153
+        },
+        "selected_blend": {
+          "macro_f1": 0.6562,
+          "qwk": 0.5923,
+          "accuracy": 0.6958
+        }
+      },
+      "depth": 6,
+      "iterations": 1362,
+      "embeddings": false,
+      "fusion": {
+        "validation_macro_f1": 0.656243762603859,
+        "tree_weight": [
+          0.8,
+          0.8,
+          0.4
+        ],
+        "class_weights": [
+          0.6,
+          1.0,
+          0.75
+        ]
+      }
+    },
+    {
+      "experiment": "corrected-timestamps-with-e5",
+      "crawl_timestamp_parser": "mixed ISO UTC",
+      "validation": {
+        "official_baseline": {
+          "macro_f1": 0.5587,
+          "qwk": 0.4876,
+          "accuracy": 0.5634
+        },
+        "history_catboost": {
+          "macro_f1": 0.6385,
+          "qwk": 0.593,
+          "accuracy": 0.6474
+        },
+        "text_and_metadata": {
+          "macro_f1": 0.6114,
+          "qwk": 0.5517,
+          "accuracy": 0.6294
+        },
+        "selected_blend": {
+          "macro_f1": 0.6662,
+          "qwk": 0.6079,
+          "accuracy": 0.6982
+        }
+      },
+      "depth": 6,
+      "iterations": 2088,
+      "post_components": 64,
+      "profile_components": 16,
+      "embeddings": true,
+      "fusion": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      }
+    }
+  ]
+}

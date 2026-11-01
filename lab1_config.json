@@ -1,0 +1,13 @@
+{
+  "depth": 6,
+  "iterations": 2400,
+  "text_c": 1.0,
+  "threads": 8,
+  "post_components": 64,
+  "profile_components": 16,
+  "embeddings": {
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "batch_size": 24
+  }
+}

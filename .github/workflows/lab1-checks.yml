@@ -1,0 +1,29 @@
+name: Lab 1 checks
+
+on:
+  push:
+    branches: [lab1-rostislav-manzyuk]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements-lab1.txt
+            requirements-data.txt
+      - run: python -m pip install -r requirements-lab1.txt nbformat==5.10.4
+      - run: python -m unittest discover -s tests -v
+      - run: python -m compileall -q *.py kairos tools tests
+      - run: python -c 'import nbformat; nbformat.validate(nbformat.read("Lab1.ipynb", as_version=4))'
