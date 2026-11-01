@@ -18,6 +18,8 @@
 
 </div>
 
+The solution code is in solution/: config.py (hyperparameters), features.py (feature building), model.py (LightGBM/CatBoost + blending + calibration), and pipeline.py (end-to-end orchestration). Run python runlab.py to train and produce results/predictions/lab1.csv. Metrics are saved to results/lab1_metrics.json, and calibration weights to results/lab1_calibration.json. Validate with python evaluate.py --predictions results/predictions/lab1.csv.
+
 This repository is the code half of the Kairos Dataset: it reads the release,
 reproduces the label, trains a baseline and scores predictions. The data is not
 here. Request it on the [dataset page](https://kairos-labs.ai/dataset/) and unpack
