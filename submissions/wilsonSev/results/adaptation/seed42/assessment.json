@@ -1,0 +1,38 @@
+{
+  "seed": 42,
+  "results": [
+    {
+      "experiment": "frozen_embedding_control",
+      "macro_f1": 0.6066,
+      "qwk": 0.5532,
+      "accuracy": 0.6126,
+      "macro_f1_unrounded": 0.6065813406305972
+    },
+    {
+      "experiment": "incumbent_ensemble",
+      "macro_f1": 0.6096,
+      "qwk": 0.5569,
+      "accuracy": 0.616,
+      "macro_f1_unrounded": 0.6095861918058567
+    },
+    {
+      "experiment": "adapted_embedding_hybrid",
+      "macro_f1": 0.6116,
+      "qwk": 0.5541,
+      "accuracy": 0.6215,
+      "macro_f1_unrounded": 0.6116148256425111
+    },
+    {
+      "experiment": "adapted_equal_weight_ensemble",
+      "macro_f1": 0.6167,
+      "qwk": 0.5635,
+      "accuracy": 0.6254,
+      "macro_f1_unrounded": 0.6167453359345886
+    }
+  ],
+  "best_new_candidate": "adapted_equal_weight_ensemble",
+  "gain_over_incumbent": 0.007159144128731865,
+  "gate_passed": true,
+  "conclusion": "Proceed to additional author splits",
+  "not_a_blind_test": true
+}

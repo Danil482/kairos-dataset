@@ -1,0 +1,122 @@
+[
+  {
+    "seed": 42,
+    "experiment": "embeddings_balanced",
+    "n_fit": 56847,
+    "n_valid": 14548,
+    "macro_f1": 0.6066,
+    "qwk": 0.5532,
+    "accuracy": 0.6126,
+    "macro_f1_unrounded": 0.6065813406305972
+  },
+  {
+    "seed": 42,
+    "experiment": "svd_balanced",
+    "n_fit": 56847,
+    "n_valid": 14548,
+    "macro_f1": 0.6049,
+    "qwk": 0.5481,
+    "accuracy": 0.6123,
+    "macro_f1_unrounded": 0.6049308924267127
+  },
+  {
+    "seed": 42,
+    "experiment": "equal_weight_ensemble",
+    "n_fit": 56847,
+    "n_valid": 14548,
+    "macro_f1": 0.6096,
+    "qwk": 0.5569,
+    "accuracy": 0.616,
+    "macro_f1_unrounded": 0.6095861918058567
+  },
+  {
+    "seed": 42,
+    "experiment": "embeddings_natural",
+    "n_fit": 56847,
+    "n_valid": 14548,
+    "macro_f1": 0.6006,
+    "qwk": 0.5091,
+    "accuracy": 0.6944,
+    "macro_f1_unrounded": 0.6005532363059921
+  },
+  {
+    "seed": 7,
+    "experiment": "embeddings_balanced",
+    "n_fit": 57106,
+    "n_valid": 14289,
+    "macro_f1": 0.6057,
+    "qwk": 0.5472,
+    "accuracy": 0.6188,
+    "macro_f1_unrounded": 0.6056766198605376
+  },
+  {
+    "seed": 7,
+    "experiment": "svd_balanced",
+    "n_fit": 57106,
+    "n_valid": 14289,
+    "macro_f1": 0.5977,
+    "qwk": 0.539,
+    "accuracy": 0.6075,
+    "macro_f1_unrounded": 0.5977404279354023
+  },
+  {
+    "seed": 7,
+    "experiment": "equal_weight_ensemble",
+    "n_fit": 57106,
+    "n_valid": 14289,
+    "macro_f1": 0.6097,
+    "qwk": 0.5514,
+    "accuracy": 0.6215,
+    "macro_f1_unrounded": 0.6097048754632642
+  },
+  {
+    "seed": 7,
+    "experiment": "embeddings_natural",
+    "n_fit": 57106,
+    "n_valid": 14289,
+    "macro_f1": 0.59,
+    "qwk": 0.4928,
+    "accuracy": 0.691,
+    "macro_f1_unrounded": 0.5899849149602363
+  },
+  {
+    "seed": 2026,
+    "experiment": "embeddings_balanced",
+    "n_fit": 57234,
+    "n_valid": 14161,
+    "macro_f1": 0.603,
+    "qwk": 0.5459,
+    "accuracy": 0.6121,
+    "macro_f1_unrounded": 0.6029513411823885
+  },
+  {
+    "seed": 2026,
+    "experiment": "svd_balanced",
+    "n_fit": 57234,
+    "n_valid": 14161,
+    "macro_f1": 0.6053,
+    "qwk": 0.5515,
+    "accuracy": 0.613,
+    "macro_f1_unrounded": 0.6052707617810935
+  },
+  {
+    "seed": 2026,
+    "experiment": "equal_weight_ensemble",
+    "n_fit": 57234,
+    "n_valid": 14161,
+    "macro_f1": 0.6101,
+    "qwk": 0.5567,
+    "accuracy": 0.6185,
+    "macro_f1_unrounded": 0.6101398318209141
+  },
+  {
+    "seed": 2026,
+    "experiment": "embeddings_natural",
+    "n_fit": 57234,
+    "n_valid": 14161,
+    "macro_f1": 0.5958,
+    "qwk": 0.5073,
+    "accuracy": 0.6925,
+    "macro_f1_unrounded": 0.595791673607993
+  }
+]

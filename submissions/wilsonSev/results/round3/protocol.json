@@ -1,0 +1,22 @@
+{
+  "candidates": [
+    "embeddings_balanced",
+    "svd_balanced",
+    "equal_weight_ensemble",
+    "embeddings_natural"
+  ],
+  "seeds": [
+    42,
+    7,
+    2026
+  ],
+  "selection": "highest mean unrounded macro-F1 across the three author splits",
+  "ensemble_weights": [
+    0.5,
+    0.5
+  ],
+  "extra_experiment": "same embedding hybrid with class_weight=None; all other settings fixed",
+  "test_seen_in_earlier_rounds": true,
+  "primary_equal_weight_result_seen_before_this_protocol": 0.6096,
+  "no_claim_of_independent_validation": "These reused overlapping author splits are for model selection, not an unbiased estimate."
+}

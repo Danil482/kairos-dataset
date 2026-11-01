@@ -1,0 +1,90 @@
+{
+  "selected": "adapted_equal_weight_ensemble",
+  "n_train": 71395,
+  "n_test": 17623,
+  "results": {
+    "macro_f1": 0.6008,
+    "qwk": 0.5433,
+    "accuracy": 0.6084
+  },
+  "selection": {
+    "selected": "adapted_equal_weight_ensemble",
+    "candidates": [
+      {
+        "experiment": "incumbent_ensemble",
+        "macro_f1_by_seed_42_7_2026": [
+          0.6095861918058567,
+          0.6097048754632642,
+          0.6101398318209141
+        ],
+        "mean_macro_f1": 0.6098102996966784
+      },
+      {
+        "experiment": "adapted_embedding_hybrid",
+        "macro_f1_by_seed_42_7_2026": [
+          0.6116148256425111,
+          0.6042832410495488,
+          0.6042577407459517
+        ],
+        "mean_macro_f1": 0.6067186024793373
+      },
+      {
+        "experiment": "adapted_equal_weight_ensemble",
+        "macro_f1_by_seed_42_7_2026": [
+          0.6167453359345886,
+          0.6098736448629741,
+          0.6119799957234738
+        ],
+        "mean_macro_f1": 0.6128663255070123
+      }
+    ],
+    "selection_rule": "highest mean unrounded macro-F1 across author splits 42,7,2026",
+    "test_seen_in_previous_rounds": true,
+    "official_test_used_for_this_selection": false,
+    "encoder_configuration_fixed_across_splits": true,
+    "split_specific_encoder_training": true
+  },
+  "confusion_rows_true": [
+    [
+      2407,
+      1001,
+      133
+    ],
+    [
+      2964,
+      5721,
+      1806
+    ],
+    [
+      190,
+      807,
+      2594
+    ]
+  ],
+  "per_class": [
+    {
+      "class": "below",
+      "precision": 0.43283582089552236,
+      "recall": 0.6797514826320249,
+      "f1": 0.5288947484069435,
+      "support": 3541
+    },
+    {
+      "class": "typical",
+      "precision": 0.7598618674458759,
+      "recall": 0.5453245639119245,
+      "f1": 0.63496115427303,
+      "support": 10491
+    },
+    {
+      "class": "above",
+      "precision": 0.57224795940878,
+      "recall": 0.7223614592035644,
+      "f1": 0.638601674052191,
+      "support": 3591
+    }
+  ],
+  "encoder_training_posts": 384,
+  "full_train_classifier_posts": 71395,
+  "caveat": "Official test was seen in prior rounds. Adaptation selection was fixed by reused validation splits before this follow-up evaluation; no blind-test claim."
+}

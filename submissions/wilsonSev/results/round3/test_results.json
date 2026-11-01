@@ -1,0 +1,96 @@
+{
+  "selected": "equal_weight_ensemble",
+  "n_train": 71395,
+  "n_test": 17623,
+  "age_fill": 698.2696209027778,
+  "results": {
+    "macro_f1": 0.5995,
+    "qwk": 0.5399,
+    "accuracy": 0.6073
+  },
+  "confusion_rows_true": [
+    [
+      2414,
+      979,
+      148
+    ],
+    [
+      2968,
+      5709,
+      1814
+    ],
+    [
+      191,
+      821,
+      2579
+    ]
+  ],
+  "per_class": [
+    {
+      "class": "below",
+      "precision": 0.43315987798313293,
+      "recall": 0.6817283253318271,
+      "f1": 0.5297344744349353,
+      "support": 3541
+    },
+    {
+      "class": "typical",
+      "precision": 0.7602876548142229,
+      "recall": 0.5441807263368602,
+      "f1": 0.6343333333333333,
+      "support": 10491
+    },
+    {
+      "class": "above",
+      "precision": 0.5679365778462894,
+      "recall": 0.7181843497632971,
+      "f1": 0.6342843089030988,
+      "support": 3591
+    }
+  ],
+  "selection": {
+    "selected": "equal_weight_ensemble",
+    "candidates": [
+      {
+        "experiment": "embeddings_balanced",
+        "macro_f1_by_seed_42_7_2026": [
+          0.6065813406305972,
+          0.6056766198605376,
+          0.6029513411823885
+        ],
+        "mean_macro_f1": 0.6050697672245078
+      },
+      {
+        "experiment": "svd_balanced",
+        "macro_f1_by_seed_42_7_2026": [
+          0.6049308924267127,
+          0.5977404279354023,
+          0.6052707617810935
+        ],
+        "mean_macro_f1": 0.6026473607144028
+      },
+      {
+        "experiment": "equal_weight_ensemble",
+        "macro_f1_by_seed_42_7_2026": [
+          0.6095861918058567,
+          0.6097048754632642,
+          0.6101398318209141
+        ],
+        "mean_macro_f1": 0.6098102996966784
+      },
+      {
+        "experiment": "embeddings_natural",
+        "macro_f1_by_seed_42_7_2026": [
+          0.6005532363059921,
+          0.5899849149602363,
+          0.595791673607993
+        ],
+        "mean_macro_f1": 0.5954432749580739
+      }
+    ],
+    "selection_rule": "highest mean unrounded macro-F1 across seeds 42,7,2026",
+    "official_test_used_for_round3_selection": false,
+    "test_seen_in_earlier_rounds": true
+  },
+  "caveat": "Official test was seen in previous rounds. Round-3 configuration was frozen by validation before this follow-up assessment. No blind-test claim."
+}
